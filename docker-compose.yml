@@ -12,10 +12,11 @@ services:
       - 8080:8080
     volumes:
       - ./conf:/etc/nginx/conf.d
-      - ./grav:/var/www/html
+      # - ./grav:/var/www/html
     restart: always
 
   php:
     image: php:7.4-fpm
-
+    volumes: 
+      - ./grav:/var/www/html
   
